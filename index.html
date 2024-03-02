@@ -14,6 +14,30 @@
 		/>
 	</head>
 	<body>
-		<div class="wrapper"></div>
+		<div class="wrapper">
+			<form>
+				<input type="text" name="search" id="search" placeholder="Enter City" />
+				<button id="searchButton">Search</button>
+			</form>
+
+			<div class="countryStats">
+				<p id="countryName"></p>
+				<p id="cityName"></p>
+				<p id="localTime"></p>
+			</div>
+
+			<div class="tempStats">
+				<p id="temp"></p>
+				<p id="currency"></p>
+			</div>
+
+			<div class="switchButtonDiv">
+				<p class="switchButtonText">C°</p>
+				<label class="switch">
+					<input type="checkbox" id="switcher" />
+					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
 	</body>
 </html>
