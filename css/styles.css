@@ -1,0 +1,12 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', 'Quicksand', Arial, Helvetica, sans-serif;
+}
+
+body {
+	height: 100svh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
