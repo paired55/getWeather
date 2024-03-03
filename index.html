@@ -17,18 +17,22 @@
 		<div class="wrapper">
 			<form>
 				<input type="text" name="search" id="search" placeholder="Enter City" />
-				<button id="searchButton">Search</button>
+				<button id="searchButton">Go!</button>
 			</form>
+			<div class="countryContainer">
+				<div class="countryStats">
+					<p id="countryName"></p>
+					<br />
+					<p id="cityName"></p>
+					<p id="localTime"></p>
+				</div>
 
-			<div class="countryStats">
-				<p id="countryName"></p>
-				<p id="cityName"></p>
-				<p id="localTime"></p>
+				<img class="countryFlag" src="" />
 			</div>
 
 			<div class="tempStats">
 				<p id="temp"></p>
-				<p id="currency"></p>
+				<p id="condition"></p>
 			</div>
 
 			<div class="switchButtonDiv">
@@ -37,6 +41,12 @@
 					<input type="checkbox" id="switcher" />
 					<span class="slider round"></span>
 				</label>
+			</div>
+
+			<div class="footer">
+				<p class="footerContent">
+					Made by <a href="https://github.com/paired55">Salah</a>
+				</p>
 			</div>
 		</div>
 	</body>
