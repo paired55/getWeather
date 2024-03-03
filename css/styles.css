@@ -262,7 +262,7 @@ p {
 	}
 }
 
-@media (min-height: 2000px) {
+@media (min-height: 2340px) {
 	.wrapper {
 		height: 600px;
 		width: 400px;
