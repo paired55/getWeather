@@ -14,8 +14,8 @@ body {
 }
 
 .wrapper {
-	height: 85vh;
-	width: 60vh;
+	height: 80vh;
+	width: 32vw;
 	border-radius: 15px;
 	background-color: #2e3336;
 	display: flex;
@@ -239,4 +239,25 @@ input:checked + .slider:before {
 
 p {
 	text-overflow: ellipsis;
+}
+
+@media (max-width: 700px) {
+	.wrapper {
+		height: 600px; /* Adjust the height as needed for smaller screens */
+		width: 400px; /* Make the card take up the full width of the screen */
+	}
+
+	#temp {
+		font-size: 3rem;
+	}
+
+	#condition {
+		font-size: 2rem;
+	}
+
+	#countryName,
+	#cityName,
+	#localTime {
+		font-size: 1rem;
+	}
 }
