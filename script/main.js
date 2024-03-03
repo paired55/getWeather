@@ -35,9 +35,13 @@ searchForm.addEventListener('submit', (e) => {
 			cityName.textContent = `${data.location.name}`;
 			localTime.textContent = `${data.location.localtime}`;
 			condition.textContent = `${data.current.condition.text}`;
-			getFlagData(`${data.location.country}`).then((data) => {
-				countryFlag.src = data['0']['flags']['svg'];
-			});
+			getFlagData(`${data.location.country}`)
+				.then((data) => {
+					countryFlag.src = data['0']['flags']['svg'];
+				})
+				.catch((err) => {
+					countryFlag.src = './assets/flagnotfound.svg';
+				});
 			if (switchButtonText.textContent === 'C°') {
 				temp.textContent = `${data.current.temp_c} C°`;
 			} else {
