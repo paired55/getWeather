@@ -262,9 +262,23 @@ p {
 	}
 }
 
-@media (max-height: 2000px) {
+@media (min-height: 2000px) {
 	.wrapper {
-		height: 1000px;
-		width: 700px;
+		height: 600px;
+		width: 400px;
+	}
+
+	#temp {
+		font-size: 3rem;
+	}
+
+	#condition {
+		font-size: 2rem;
+	}
+
+	#countryName,
+	#cityName,
+	#localTime {
+		font-size: 1rem;
 	}
 }
