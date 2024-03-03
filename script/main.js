@@ -43,6 +43,14 @@ searchForm.addEventListener('submit', (e) => {
 			} else {
 				temp.textContent = `${data.current.temp_f} F°`;
 			}
+			if (`${data.location.country}`.length > 15) {
+				countryName.style.cssText = 'font-size: 2rem;';
+				cityName.style.cssText = 'font-size: 1.5rem;';
+				localTime.style.cssText = 'font-size: 1.5rem;';
+			} else {
+				countryName.style.cssText = 'font-size: 3rem;';
+				cityName.style.cssText = 'font-size: 1.5rem;';
+			}
 		})
 		.catch((err) => {
 			countryName.textContent = `No match found!`;
