@@ -243,8 +243,8 @@ p {
 
 @media (max-width: 700px) {
 	.wrapper {
-		height: 600px; /* Adjust the height as needed for smaller screens */
-		width: 400px; /* Make the card take up the full width of the screen */
+		height: 600px;
+		width: 400px;
 	}
 
 	#temp {
@@ -259,5 +259,12 @@ p {
 	#cityName,
 	#localTime {
 		font-size: 1rem;
+	}
+}
+
+@media (max-height: 2000px) {
+	.wrapper {
+		height: 1000px;
+		width: 700px;
 	}
 }
