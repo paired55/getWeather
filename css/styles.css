@@ -14,8 +14,8 @@ body {
 }
 
 .wrapper {
-	height: 80vh;
-	width: 32vw;
+	height: 85vh;
+	width: 30vw;
 	border-radius: 15px;
 	background-color: #2e3336;
 	display: flex;
