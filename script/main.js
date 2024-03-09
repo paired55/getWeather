@@ -10,9 +10,11 @@ const switchButtonText = document.querySelector('.switchButtonText');
 const switcher = document.querySelector('#switcher');
 const countryFlag = document.querySelector('.countryFlag');
 let userQuery = '';
+let foundError;
 
 // Append default city 'cairo' on page load
 getWeatherData('cairo').then((data) => {
+	foundError = false;
 	countryName.textContent = `${data.location.country},`;
 	cityName.textContent = `${data.location.name}`;
 	localTime.textContent = `${data.location.localtime}`;
@@ -31,6 +33,7 @@ searchForm.addEventListener('submit', (e) => {
 
 	getWeatherData(userQuery)
 		.then((data) => {
+			foundError = false;
 			countryName.textContent = `${data.location.country},`;
 			cityName.textContent = `${data.location.name}`;
 			localTime.textContent = `${data.location.localtime}`;
@@ -54,6 +57,7 @@ searchForm.addEventListener('submit', (e) => {
 			}
 		})
 		.catch((err) => {
+			foundError = true;
 			countryName.textContent = `No match found!`;
 			cityName.textContent = `Please adjust query.`;
 			localTime.textContent = ``;
@@ -67,12 +71,16 @@ searchForm.addEventListener('submit', (e) => {
 switcher.addEventListener('click', () => {
 	if (switchButtonText.textContent === 'C°') {
 		getWeatherData(userQuery || 'cairo').then((data) => {
-			temp.textContent = `${data.current.temp_f} F°`;
+			if (foundError === false) {
+				temp.textContent = `${data.current.temp_f} F°`;
+			}
 		});
 		switchButtonText.textContent = 'F°';
 	} else {
 		getWeatherData(userQuery || 'cairo').then((data) => {
-			temp.textContent = `${data.current.temp_c} C°`;
+			if (foundError === false) {
+				temp.textContent = `${data.current.temp_c} C°`;
+			}
 		});
 		switchButtonText.textContent = 'C°';
 	}
